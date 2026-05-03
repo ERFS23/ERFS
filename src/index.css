@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+@layer base {
+  :root {
+    --bg: #0d0b08;
+    --bg2: #120f0a;
+    --bg3: #1a1510;
+    --gold: #c9963b;
+    --gold-light: #e8b96a;
+    --gold-pale: #f5dfa0;
+    --amber: #f0a030;
+    --warm-white: #f5ede0;
+    --muted: #8a7a68;
+    --text: #e8ddd0;
+    --accent-red: #b03a2e;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.35;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg3);
+  border: 2px solid var(--bg);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; transform: scaleY(1); }
+  40% { opacity: 0.85; transform: scaleY(0.96); }
+  60% { opacity: 0.95; transform: scaleY(1.02); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(76,175,80,0.2); }
+  50% { box-shadow: 0 0 0 6px rgba(76,175,80,0.1); }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-40px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes float-in {
+  from { transform: translateY(80px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-flicker { animation: flicker 3s ease-in-out infinite; }
+.animate-pulse-dot { animation: pulse-dot 2s infinite; }
+.animate-shimmer { animation: shimmer 2s infinite; }
+.animate-float-in { animation: float-in 1s ease 2s both; }
+.animate-fade-in { animation: fade-in 0.18s ease both; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px) translateZ(0);
+  transition: all 0.8s ease-out;
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0) translateZ(0);
+}
