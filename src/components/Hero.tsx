@@ -78,34 +78,35 @@ export default function Hero() {
           }
         }}
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[60px] items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[60px] items-center pt-8 md:pt-0">
           <div className="text-center lg:text-left">
-            <motion.div variants={subtitleVariants} className="text-[0.8rem] tracking-[0.2em] uppercase text-[var(--gold)] mb-5 flex items-center gap-3 justify-center lg:justify-start">
+            <motion.div variants={subtitleVariants} className="text-[0.8rem] tracking-[0.2em] uppercase text-[var(--gold)] mb-5 flex items-center gap-3 justify-center w-full lg:justify-center">
               <span className="block w-8 h-px bg-[var(--gold)]"></span>
-              Curitiba, Paraná · Projeto Social
+              Projeto Social Internacional
+              <span className="block w-8 h-px bg-[var(--gold)]"></span>
             </motion.div>
-            <motion.h1 variants={titleVariants} className="font-serif text-[clamp(3rem,5.5vw,5.2rem)] text-[var(--warm-white)] mb-6 leading-[1.1] font-semibold">
+            <motion.h1 variants={titleVariants} className="font-serif text-[clamp(2.5rem,5.5vw,5.2rem)] text-[var(--warm-white)] mb-6 leading-[1.1] font-semibold">
               Uma criança espera<br />
               por <em className="text-[var(--gold-light)] italic">você</em> hoje.
             </motion.h1>
             <motion.p variants={subtitleVariants} className="text-[1.15rem] text-[var(--warm-white)] drop-shadow-md leading-[1.7] mb-9 max-w-[480px] mx-auto lg:mx-0">
-              58 crianças em abrigos de Curitiba aguardam um padrinho. Seu apoio mensal transforma vidas com material educativo, espiritual e afeto.
+              58 crianças das casas lares de Curitiba aguardam um padrinho. Seu apoio transforma vidas com material educativo, espiritual e afeto.
             </motion.p>
-            <motion.div variants={actionVariants} className="flex gap-4 flex-wrap justify-center lg:justify-start">
+            <motion.div variants={actionVariants} className="flex flex-col sm:flex-row gap-4 flex-wrap justify-center lg:justify-start w-full">
               <a
                 href="#contato"
-                className="bg-gradient-to-br from-[var(--gold)] to-[var(--amber)] text-[var(--bg)] font-semibold text-[0.95rem] tracking-[0.04em] px-9 py-4 rounded-sm no-underline transition-all duration-300 inline-flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(201,150,59,0.3)]"
+                className="bg-gradient-to-br from-[var(--gold)] to-[var(--amber)] text-[var(--bg)] font-semibold text-[0.95rem] tracking-[0.04em] px-6 py-4 rounded-sm no-underline transition-all duration-300 flex items-center justify-center gap-2 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(201,150,59,0.3)] min-h-[48px] w-full sm:w-auto"
               >
                 ✦ Apadrinhar uma Criança
               </a>
               <a
                 href="#contato"
-                className="text-[var(--text)] text-[0.9rem] px-5 py-4 rounded-sm no-underline border border-[rgba(201,150,59,0.25)] transition-all duration-200 inline-flex items-center gap-2 hover:border-[var(--gold)] hover:text-[var(--gold-light)] bg-black/20 backdrop-blur-sm"
+                className="text-[var(--text)] text-[0.9rem] px-6 py-4 flex justify-center rounded-sm no-underline border border-[rgba(201,150,59,0.25)] transition-all duration-200 items-center gap-2 hover:border-[var(--gold)] hover:text-[var(--gold-light)] bg-black/20 backdrop-blur-sm min-h-[48px] w-full sm:w-auto"
               >
                 Falar com a equipe →
               </a>
             </motion.div>
-            <motion.div variants={statsVariants} className="flex gap-8 mt-10 pt-8 border-t border-[rgba(201,150,59,0.15)] justify-center lg:justify-start">
+            <motion.div variants={statsVariants} className="flex flex-wrap gap-x-8 gap-y-6 mt-10 pt-8 border-t border-[rgba(201,150,59,0.15)] justify-center lg:justify-start">
               <div>
                 <div className="font-serif text-[2.4rem] font-bold text-[var(--gold-light)] leading-none drop-shadow-md">58</div>
                 <div className="text-[0.8rem] text-[var(--text)] drop-shadow-sm uppercase tracking-[0.05em] mt-1">Crianças no projeto</div>
@@ -120,25 +121,25 @@ export default function Hero() {
               </div>
             </motion.div>
           </div>
-          <motion.div variants={imageVariants} className="flex justify-center relative">
+          <motion.div variants={imageVariants} className="flex justify-center relative mt-10 lg:mt-0">
             <div className="relative w-full max-w-[500px]">
               <div className="absolute -inset-4 bg-[radial-gradient(circle_at_center,rgba(201,150,59,0.2),transparent_70%)] rounded-2xl"></div>
               <div className="relative z-[2] rounded-xl overflow-hidden border border-[rgba(201,150,59,0.3)] shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
                 <div className="relative w-full pt-[56.25%]">
                   <iframe
                     className="absolute inset-0 w-full h-full"
-                    src="https://www.youtube.com/embed/uEFLSkLjTwE?rel=0&modestbranding=1"
+                    src="https://www.youtube.com/embed/uEFLSkLjTwE?rel=0&modestbranding=1&autoplay=1"
                     title="Projeto Fênix - Vídeo institucional"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   ></iframe>
                 </div>
               </div>
-              <div className="absolute -top-3 -right-3 bg-[var(--bg3)] border border-[rgba(201,150,59,0.3)] rounded-lg px-4 py-2.5 flex items-center gap-2.5 text-[0.8rem] z-10 whitespace-nowrap backdrop-blur-lg">
+              <div className="absolute -top-3 -right-2 sm:-right-3 bg-[var(--bg3)] border border-[rgba(201,150,59,0.3)] rounded-lg px-3 py-2 sm:px-4 sm:py-2.5 flex items-center gap-2.5 text-[0.7rem] sm:text-[0.8rem] z-10 whitespace-nowrap backdrop-blur-lg">
                 <div className="w-2 h-2 rounded-full bg-[#4caf50] shadow-[0_0_0_3px_rgba(76,175,80,0.2)] animate-pulse-dot flex-shrink-0"></div>
-                <span>6 apadrinhadas este mes</span>
+                <span>6 já felizes e apadrinhados</span>
               </div>
-              <div className="absolute -bottom-3 -left-3 bg-[var(--bg3)] border border-[rgba(201,150,59,0.3)] rounded-lg px-4 py-2.5 flex items-center gap-2.5 text-[0.8rem] z-10 whitespace-nowrap backdrop-blur-lg">
+              <div className="absolute -bottom-3 -left-2 sm:-left-3 bg-[var(--bg3)] border border-[rgba(201,150,59,0.3)] rounded-lg px-3 py-2 sm:px-4 sm:py-2.5 flex items-center gap-2.5 text-[0.7rem] sm:text-[0.8rem] z-10 whitespace-nowrap backdrop-blur-lg">
                 <span className="text-[var(--gold)]">52</span>
                 <span>aguardando padrinho</span>
               </div>

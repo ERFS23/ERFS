@@ -23,7 +23,7 @@ export default function Story() {
           <div className="mt-10 reveal">
             <a
               href="#contato"
-              className="bg-gradient-to-br from-[var(--gold)] to-[var(--amber)] text-[var(--bg)] font-semibold text-[0.95rem] tracking-[0.04em] px-9 py-4 rounded-sm no-underline transition-all duration-300 inline-flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(201,150,59,0.3)]"
+              className="bg-gradient-to-br from-[var(--gold)] to-[var(--amber)] text-[var(--bg)] font-semibold text-[0.95rem] tracking-[0.04em] px-6 py-4 rounded-sm no-underline transition-all duration-300 flex items-center justify-center gap-2 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(201,150,59,0.3)] w-full sm:w-max min-h-[48px]"
             >
               Quero levar essa mensagem →
             </a>

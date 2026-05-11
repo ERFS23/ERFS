@@ -47,7 +47,7 @@ export default function Pricing({ onSelectPlan }: PricingProps) {
               <div className="font-serif text-[1.8rem] font-semibold text-[var(--warm-white)] mb-1">R$ {plan.price}</div>
               <div className="text-[0.8rem] text-[var(--muted)] mb-6">Total: R$ {plan.total}/ano</div>
               <button
-                className={`w-full py-3 rounded-sm font-sans text-[0.85rem] font-medium tracking-[0.06em] uppercase transition-all duration-200 ${
+                className={`w-full py-3 min-h-[48px] rounded-sm font-sans text-[0.85rem] font-medium tracking-[0.06em] uppercase transition-all duration-200 ${
                   plan.featured
                     ? "bg-gradient-to-br from-[var(--gold)] to-[var(--amber)] border-transparent text-[var(--bg)]"
                     : "bg-transparent border border-[rgba(201,150,59,0.3)] text-[var(--gold-light)] hover:bg-gradient-to-br hover:from-[var(--gold)] hover:to-[var(--amber)] hover:border-transparent hover:text-[var(--bg)]"

@@ -5,11 +5,11 @@ export default function UrgencyStrip() {
         <div className="flex items-center justify-center gap-8 flex-wrap">
           <div className="text-center">
             <div className="font-serif text-[2rem] font-bold text-[var(--gold-light)]">6</div>
-            <div className="text-[0.85rem] text-[var(--muted)]">Apadrinhadas</div>
+            <div className="text-[0.85rem] text-[var(--muted)]">Já felizes e apadrinhados</div>
           </div>
-          <div className="w-px h-10 bg-[rgba(201,150,59,0.2)]"></div>
-          <div className="text-center flex-1 max-w-[500px]">
-            <div className="px-6">
+          <div className="hidden sm:block w-px h-10 bg-[rgba(201,150,59,0.2)]"></div>
+          <div className="text-center flex-1 max-w-[500px] w-full order-last sm:order-none mt-4 sm:mt-0">
+            <div className="px-2 sm:px-6">
               <div className="flex justify-between text-[0.8rem] text-[var(--muted)] mb-2">
                 <span>Progresso em 2025</span>
                 <span>6 de 58</span>
@@ -21,7 +21,7 @@ export default function UrgencyStrip() {
               </div>
             </div>
           </div>
-          <div className="w-px h-10 bg-[rgba(201,150,59,0.2)]"></div>
+          <div className="hidden sm:block w-px h-10 bg-[rgba(201,150,59,0.2)]"></div>
           <div className="text-center">
             <div className="font-serif text-[2rem] font-bold text-[var(--gold-light)]">52</div>
             <div className="text-[0.85rem] text-[var(--muted)]">Aguardando</div>

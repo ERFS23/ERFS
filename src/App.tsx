@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useScrollReveal } from "./hooks/useScrollReveal";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -22,10 +22,19 @@ import FinalCta from "./components/FinalCta";
 import Footer from "./components/Footer";
 import FloatingActionButton from "./components/FloatingActionButton";
 import BackToTopButton from "./components/BackToTopButton";
+import { LoadingScreen } from "./components/LoadingScreen";
 
 export default function App() {
   useScrollReveal();
   const [selectedPlan, setSelectedPlan] = useState("2");
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleSelectPlan = (qty: string) => {
     setSelectedPlan(qty);
@@ -41,6 +50,7 @@ export default function App() {
 
   return (
     <>
+      <LoadingScreen isLoading={isLoading} />
       <Header />
       <main>
         <Hero />
